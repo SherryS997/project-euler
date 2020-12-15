@@ -20,13 +20,4 @@ def smallest_sum_no(num):
         sol2 = (result % 1000000007)
     return sol2
 
-
-def summation_above(limit):
-    limit = limit
-    result = 0
-    for x in range(1, limit + 1):
-        # print(x)
-        result += smallest_sum_no(x)
-    return int(result)
-
-print(summation_above(1000000))
+print(smallest_sum_no(4660046610375530309))
