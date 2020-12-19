@@ -20,4 +20,4 @@ def smallest_sum_no(num):
         sol2 = (result % 1000000007)
     return sol2
 
-print(smallest_sum_no(4660046610375530309))
+print(smallest_sum_no(10000000070))
