@@ -31,5 +31,3 @@ def blackjack_hand_greater_than(hand_1, hand_2):
 
 
 print(blackjack_hand_greater_than(['J', 'A', 'A', '2'], ['9', 'Q', '8', 'A']))
-
-#kk
