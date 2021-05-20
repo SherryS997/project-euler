@@ -19,7 +19,7 @@ while True:
             test.append(y)
             if y > test_val:
                 test_val = y
-    if len(test) <= 2 and len(test) >= 1 and test_val <= 3:
+    if len(test) <= 2 and test_val <= 3:
         break
 
 for z in nums:
