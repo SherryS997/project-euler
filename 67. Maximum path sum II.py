@@ -23,7 +23,6 @@ def triangle_path(triangle, path_no):
         max_value.append(triangle[path_no][0])
     else:
         for x in range(path_no):
-            y = x + 1
             if x == 0:
                 if ((triangle[path_no][x]) + (triangle[(path_no - 1)][x])) > max_value_no:
                     max_value.append((triangle[path_no][x]) + (triangle[(path_no - 1)][x]))
@@ -40,7 +39,6 @@ def triangle_path(triangle, path_no):
                     max_value.append((triangle[path_no][x]) + (triangle[(path_no - 1)][x - 1]))
                 max_value_no = 0
     return max_value
-    max_value = 0
 
 def max_path_sum(triangle):
     max_limit = len(triangle) + 1
