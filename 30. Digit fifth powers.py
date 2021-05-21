@@ -9,10 +9,8 @@ nos_1 = []
 
 while no < 355000:
     no = str(no)
-    for x in no:
-        nos.append(((int(x)) ** 5))
-    if sum(nos) == int(no) and sum(nos) not in nos_1:
-        nos_1.append(sum(nos))
+    for x in no: nos.append(((int(x)) ** 5))
+    if sum(nos) == int(no) and sum(nos) not in nos_1: nos_1.append(sum(nos))
     nos = []
     no = int(no)
     no += 1
