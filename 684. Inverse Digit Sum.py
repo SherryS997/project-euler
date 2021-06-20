@@ -1,30 +1,41 @@
+M = 1000000007
+
 def smallest_sum_no(num):
-    no = '1'
-    while True:
-        result = 0
-        for x in no:
-            result += int(x)
-        if result == num:
-            return int(no)
-        no = str(int(no) + 1)
+    if num < 10: return num
+    zeros = (num // 9)
+    tens = 1
+    if zeros > 10000:
+        if zeros > M:
+            print(True)
+            zeros = zeros % (M - 1)
+        while zeros > 100000:
+            tens *= (10 ** 100000) % M
+            zeros -= 100000
+        tens *= (10 ** zeros) % M
+    else: tens *= (10 ** zeros) % M
+    tens = tens % M
+    no = int(str(num % 9)) + 1
+    no = (no * tens) - 1
+    return no % M
 
-def summation_above(limit):
-    result = 0
-    for x in range(1, limit + 1):
-        result += smallest_sum_no(x)
-    return result
+def fib(n):
+    a = 0
+    b = 1
+    if n == 0: return 0
+    elif n == 1: return 1
+    for x in range(n-1):
+        c = a + b
+        a = b
+        b = c
+    return c
 
-prev1 = 0
-prev2 = 0
-cur = 1
-seq = []
-no = 1
+def sum_small_nums(n):
+    ans = 0
+    for x in range(n + 1):
+        ans = (ans + smallest_sum_no(x)) % M
+    return ans % M
 
-while no <= 90:
-    prev2 = prev1
-    prev1 = cur
-    cur = cur + prev2
-    seq.append(cur)
-    no += 1
-
-print(seq)
+# print(sum_small_nums(fib(90)))
+# print(smallest_sum_no(fib(90)))
+# print(smallest_sum_no(fib(50)))
+print(sum_small_nums(fib(30)))

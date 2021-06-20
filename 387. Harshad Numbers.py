@@ -8,26 +8,27 @@ def is_prime(n):
         i += 1
     return True
 
+print(is_prime(1000000007))
 
-def is_harshad(x):
-    no = 0
-    for i in str(x):
-        no += int(i)
-    if x % no == 0:
-        return True
-    else:
-        return False
-
-
-def is_strong(x):
-    no = 0
-    for i in str(x):
-        no += int(i)
-    if is_prime((x / no)):
-        return True
-    else:
-        return False
-
-
-def is_right_truncatable_harshad(x):
-    for
+# def is_harshad(x):
+#     no = 0
+#     for i in str(x):
+#         no += int(i)
+#     if x % no == 0:
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_strong(x):
+#     no = 0
+#     for i in str(x):
+#         no += int(i)
+#     if is_prime((x / no)):
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_right_truncatable_harshad(x):
+#     for
