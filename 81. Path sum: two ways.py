@@ -1,17 +1,19 @@
 import numpy as np
 
-b = []
-
-with open('addons/p081_matrix.txt') as f:
-	a = f.read()
-
-a = a.strip().split('\n')
-
-for x in a:
-	b.append(x.split(','))
+# b = []
+#
+# with open('addons/p081_matrix.txt') as f:
+# 	a = f.read()
+#
+# a = a.strip().split('\n')
+#
+# for x in a:
+# 	b.append(x.split(','))
 
 y,x = 0,0
-b = np.array(b)
+b = np.random.randint(1000, size=(200, 200))
+
+print(b)
 
 def shortest_path(b, x = 0, y = 0, d = {}):
 	'''

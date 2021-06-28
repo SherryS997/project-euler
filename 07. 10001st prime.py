@@ -17,7 +17,7 @@ def nth_prime_no(n):
                 return i
         i += 1
     return
-    
+
 print(is_prime(101))
 
-print(nth_prime_no(10001))
+print(nth_prime_no(100001))
