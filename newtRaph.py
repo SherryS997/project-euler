@@ -10,12 +10,10 @@ def newtRaph(num, exp, epsilon):
     def f_prime(x):
         return exp*x**(exp - 1)
     guess1 = 0
-    processes = 0
     while True:
         temp = guess
         guess = guess - f(guess)/f_prime(guess)
         guess1 = temp
-        processes += 1
         if abs(guess1 - guess) < epsilon:
             break
-    return guess, processes
+    return guess
